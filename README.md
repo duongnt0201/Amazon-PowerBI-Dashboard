@@ -44,7 +44,8 @@ This project provides a **Google Colab** notebook that automates the processing 
 
 - A cleaned `.xlsx` report summarizing Spend and Sales per SKU per day
 
-
+---
+---
 
 
 # 📊 Amazon Ads Performance Dashboard for Automotive Category | Power BI
@@ -57,15 +58,6 @@ This project provides a **Google Colab** notebook that automates the processing 
 
 **Tools Used:** Power BI
 
----
-
-## 📑 Table of Contents
-
-- [📌 Background & Overview](#-background--overview)  
-- [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)  
-- [🧠 Design Thinking Process](#-design-thinking-process)  
-- [📊 Key Insights & Visualizations](#-key-insights--visualizations)  
-- [🔎 Final Conclusion & Recommendation](#-final-conclusion--recommendation)
 
 ---
 
@@ -134,33 +126,45 @@ This project uses a simulated dataset based on actual performance of Amazon adve
 
 - **Source:** Sample data based on real Amazon campaign performance  
 - **Format:** `.pbix` (Power BI Desktop)
-
 ---
 
 ### 📊 Data Structure & Relationships
 
-
 #### 1️⃣ Table Used
-### 📊 Data Structure & Tables
 
-The dataset consists of 7 main tables used to build the purchasing performance dashboard:
+The dataset consists of 8 main tables used to build the Amazon Ads and Sales Performance Dashboard:
 
-| No. | Table Name                           | Description                                |
-|-----|--------------------------------------|--------------------------------------------|
-| 1  | **Fact_Purchasing_OrderDetail**      | Line-level order details                   |
-| 2  | **Fact_Product_Inventory**           | Current inventory levels                   |
-| 3  | **Dim_Product_Product**              | Product master data                        |
-| 4  | **Dim_Purchasing_OrderHeader**       | Order-level metadata                       |
-| 5  | **Dim_Purchasing_Vendor**            | Vendor master data                         |
-| 6  | **Dim_Purchasing_ProductVendor**     | Product-vendor mapping                     |
-| 7  | **Dim_Product_ProductTaxonomy**      | Product categories                         |
-| 8  | **Dim_Product_ProductTable**         | Product category and hierarchy             |
-
-### 🔗 Data Model Relationship Diagram
-
-Below is the relationship model used in this project:
-
-![Power BI Model](https://prnt.sc/ZKhPNyHd-xpt)
-![Power BI Data Model](https://i.imgur.com/yourImageLink.png)
+| No. | Table Name           | Description                                |
+|-----|---------------------|--------------------------------------------|
+| 1  | **Fact_PriceList**   | Price list by SKU          |
+| 2  | **Fact_Order**       | Order details including quantity and units |
+| 3  | **Fact_Total**       | Consolidated total sales and market KPIs   |
+| 4  | **Fact_Ads**         | Advertising performance by campaign        |
+| 5  | **Dim_Product**      | Product master data (SKU, ASIN, Niche, etc.) |
+| 6  | **Dim_Market**       | Market information (e.g., US, Canada)      |
+| 7  | **Dim_Date**         | Date dimension table for time intelligence |
+| 8  | **Dim_LaunchingDate**| Product launching date           |
 
 
+#### 2️⃣ Data Relationships:
+
+[![Power BI Data Model](https://i.postimg.cc/4x9gjRtZ/Screenshot-4.png)](https://postimg.cc/YvMZmVby)
+
+
+
+----
+
+## 🔗 Data Model Relationships
+
+| From Table      | To Table        | Join Key          | Relationship Type                      |
+|-----------------|-----------------|-------------------|-----------------------------------------|
+| Fact_Total      | Dim_Date        | Date              | Many-to-One (sales data per date)       |
+| Fact_Total      | Dim_Product     | SKU               | Many-to-One (sales data per product)    |
+| Fact_Total      | Dim_Market      | Market            | Many-to-One (sales data per market)     |
+| Fact_Ads        | Dim_Date        | Date              | Many-to-One (ad data per date)          |
+| Fact_Ads        | Dim_Product     | SKU               | Many-to-One (ad data per product)       |
+| Fact_Ads        | Dim_Market      | Market            | Many-to-One (ad data per market)        |
+| Fact_Order      | Dim_Product     | SKU               | Many-to-One (order data per product)    |
+| Fact_Order      | Dim_Date        | Date              | Many-to-One (order data per date)       |
+| Fact_PriceList  | Dim_Product     | SKU               | Many-to-One (price list per product)    |
+| Dim_Product     | Dim_LaunchingDate | Product Number | Many-to-One (product linked to launch date) |
