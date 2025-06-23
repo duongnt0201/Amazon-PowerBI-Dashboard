@@ -45,6 +45,7 @@ This project provides a **Google Colab** notebook that automates the processing 
 - A cleaned `.xlsx` report summarizing Spend and Sales per SKU per day
 
 ---
+
 ---
 
 
@@ -151,8 +152,7 @@ The dataset consists of 8 main tables used to build the Amazon Ads and Sales Per
 [![Power BI Data Model](https://i.postimg.cc/4x9gjRtZ/Screenshot-4.png)](https://postimg.cc/YvMZmVby)
 
 
-
-----
+---
 
 ## 🔗 Data Model Relationships
 
