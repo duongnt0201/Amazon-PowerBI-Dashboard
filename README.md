@@ -168,3 +168,66 @@ The dataset consists of 8 main tables used to build the Amazon Ads and Sales Per
 | Fact_Order      | Dim_Date        | Date              | Many-to-One (order data per date)       |
 | Fact_PriceList  | Dim_Product     | SKU               | Many-to-One (price list per product)    |
 | Dim_Product     | Dim_LaunchingDate | Product Number | Many-to-One (product linked to launch date) |
+
+---
+
+## 📊 Visualized Insights & Key Findings
+
+### 1️⃣ Amazon Overview Dashboard 2024
+[![Amazon Overview Dashboard 2024](https://i.postimg.cc/MKcNGkDL/Dashboard-Sample-Data-not-for-use-page-0001.jpg)](https://postimg.cc/nCJ0dPNK)
+### 📌 Key Findings:
+- Total Sales reached **$1.13M**, a **+94.3%** increase YoY  
+- Ad Sales contributed **$591.9K**, growing by **52.3%**  
+- Total Ad Spend: **$185.8K**, up **45%**, but **ACoS decreased** to 31.4%  
+- **ROAS improved** to 3.19, indicating better ad efficiency  
+- Top-selling products include `SW1951C`, `72873G01`, and `89-817109A3`  
+- Most effective ad formats: `SP PT` and `SB Video Broad` campaigns  
+
+---
+
+### 2️⃣ Sales Analysis Dashboard
+[![Sales Analysis Dashboard](https://i.postimg.cc/QCv67tby/Dashboard-Sample-Data-not-for-use-page-0002.jpg)](https://postimg.cc/Wq66LsxG)
+### 📌 Key Findings:
+
+- The **US market dominates** with over $1.02M in sales  
+- Canada contributes $106K, Mexico remains marginal  
+- Key product niches: Starter Solenoids, Fuel Pumps, Air Filters  
+- Monthly sales trends indicate consistent growth, with seasonal peaks  
+- Top products show high **Conversion Rates**, notably `72873G01` at **20.72%**
+
+---
+
+### 3️⃣ Amazon Advertising Analysis Dashboard
+[![Advertising Analysis Dashboard](https://i.postimg.cc/Xvnsdtf4/Dashboard-Sample-Data-not-for-use-page-0003.jpg)](https://postimg.cc/LJ0kMCQb)
+### 📌 Key Findings:
+
+- Highest ad spend on `SB Video Broad` and `SP PT` formats  
+- Overall **Conversion Rate (CVR)** improved to **7.47%**, a 0.44% increase  
+- `TOS` and `SP Query` campaigns achieve outstanding CVR above **17%**  
+- `Research` campaigns deliver the best **ROAS** at **4.76**  
+- Average **CPC** remains low at **$0.41**, though some formats vary significantly  
+- ACoS varies across campaign forms but shows an overall downward trend  
+
+---
+
+### 4️⃣ Year-over-Year Change Dashboard
+### 📌 Key Findings:
+
+[![Year-over-Year Change Dashboard](https://i.postimg.cc/9MrKwv2z/Dashboard-Sample-Data-not-for-use-page-0004.jpg)](https://postimg.cc/wyY0S47d)
+
+- Significant total sales growth, led by:
+  - `SW1951C`: +$19,978
+  - `72873G01`: +$16,850
+  - `89-817109A3`: +$9,603  
+- Top ad revenue growth from:
+  - `SB Video Broad`: +$54.3K  
+  - `SP PT`: +$36.1K  
+  - `SB Video PT`: +$40.1K  
+- Certain campaigns underperformed (e.g., `SD PT`, `Performance`) requiring review  
+- Ad spend efficiency improved, translating $57.6K extra spend into $203.3K more in ad revenue  
+
+---
+
+
+
+
